@@ -10,6 +10,7 @@ function Sidebar() {
         <li><a href="#">Réservations</a></li>
         <li><a href="#">Clients</a></li>
         <li><a href="#">Chambres</a></li>
+        <li><a href="#">suite</a></li>
       </ul>
     </aside>
   );
