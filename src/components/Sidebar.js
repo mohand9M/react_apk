@@ -1,18 +1,19 @@
+// Sidebar.js
 import React from 'react';
-import "../styles/Sidebar.css";
+import '../styles/Sidebar.css';
 
-function Sidebar() {
+const Sidebar = ({ onSelect }) => {
   return (
-    <aside className="sidebar">
-      <h2>🏨 HôtelManager</h2>
+    <div className="sidebar">
+      <h2>Menu</h2>
       <ul>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Réservations</a></li>
-        <li><a href="#">Clients</a></li>
-        <li><a href="#">Chambres</a></li>
+        <li onClick={() => onSelect('home')}>Accueil</li>
+        <li onClick={() => onSelect('reservations')}>Réservations</li>
+        <li onClick={() => onSelect('clients')}>Clients</li>
+        <li onClick={() => onSelect('users')}>Utilisateurs</li>
       </ul>
-    </aside>
+    </div>
   );
-}
+};
 
 export default Sidebar;

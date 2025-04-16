@@ -1,14 +1,14 @@
 import React from 'react';
+import '../styles/UserProfileCard.css';
 
-function UserProfileCard() {
+const UserProfileCard = () => {
   return (
-    <div className="bg-white p-4 rounded shadow">
-      <h2 className="text-xl font-semibold mb-2">👤 Profil utilisateur</h2>
-      <p>Nom : Din Guemakh</p>
-      <p>Email : din@email.com</p>
-      <p>Rôle : Admin</p>
+    <div className="user-profile-card">
+      <h3>Utilisateur connecté</h3>
+      <p>Nom: Admin</p>
+      <p>Email: admin@hotel.com</p>
     </div>
   );
-}
+};
 
 export default UserProfileCard;

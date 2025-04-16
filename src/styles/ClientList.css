@@ -1,0 +1,17 @@
+.client-list {
+    padding: 20px;
+  }
+  
+  .client-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .client-list li {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  

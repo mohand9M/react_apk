@@ -1,23 +1,23 @@
 import React from 'react';
+import '../styles/ReservationList.css';
 
-const reservations = [
-  { id: 1, nom: 'Jean Dupont', chambre: '101', date: '2025-04-10' },
-  { id: 2, nom: 'Sophie Martin', chambre: '203', date: '2025-04-12' },
-];
+const ReservationList = () => {
+  const reservations = [
+    { id: 1, name: 'Jean Dupont', room: '3' },
+    { id: 2, name: 'Claire Durand', room: '7' },
+    { id: 3, name: 'Paul Morel', room: '1' },
+  ];
 
-function ReservationList() {
   return (
-    <div className="bg-white p-4 rounded shadow">
-      <h2 className="text-xl font-semibold mb-4">📅 Réservations à venir</h2>
-      <ul className="space-y-2">
-        {reservations.map((res) => (
-          <li key={res.id} className="border-b pb-2">
-            {res.nom} - Chambre {res.chambre} - {res.date}
-          </li>
+    <div className="reservation-list">
+      <h2>Réservations récentes</h2>
+      <ul>
+        {reservations.map(res => (
+          <li key={res.id}>{res.name} - Chambre {res.room}</li>
         ))}
       </ul>
     </div>
   );
-}
+};
 
 export default ReservationList;
