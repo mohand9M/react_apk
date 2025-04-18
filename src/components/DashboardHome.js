@@ -16,10 +16,6 @@ const DashboardHome = () => {
     ],
   };
 
-  const handleAddHotel = () => {
-    alert('Bouton Ajouter un hôtel cliqué !');
-  };
-
   return (
     <div className="dashboard-home">
       <StatsSummary />
@@ -27,9 +23,6 @@ const DashboardHome = () => {
         <h3>Statistiques générales</h3>
         <Bar data={data} />
       </div>
-      <button className="add-hotel-btn" onClick={handleAddHotel}>
-        ➕ Ajouter un hôtel
-      </button>
     </div>
   );
 };

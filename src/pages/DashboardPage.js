@@ -1,12 +1,12 @@
 import React from 'react';
 import DashboardLayout from '../components/DashboardLayout';
-import '../styles/DashboardPage.css';
+import DashboardHome from '../components/DashboardHome';
 
 const DashboardPage = () => {
   return (
-    <div className="dashboard-page">
-      <DashboardLayout />
-    </div>
+    <DashboardLayout>
+      <DashboardHome />
+    </DashboardLayout>
   );
 };
 

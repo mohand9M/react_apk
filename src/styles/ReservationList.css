@@ -1,22 +1,13 @@
 .reservation-list {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-  }
-  
-  .reservation-list h2 {
-    margin-bottom: 10px;
-  }
-  
-  .reservation-list ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .reservation-list li {
-    padding: 5px 0;
-    border-bottom: 1px solid #eee;
-  }
-  
+  padding: 20px;
+}
+
+.reservation-list h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.reservation-list ul {
+  list-style: square;
+  padding-left: 20px;
+}

@@ -1,41 +1,30 @@
-// DashboardLayout.js
-import React, { useState } from 'react';
-import Sidebar from './Sidebar';
-import Topbar from './Topbar';
-import StatsSummary from './StatsSummary';
-import HotelList from './HotelList';
-import ReservationList from './ReservationList';
-import ClientList from './ClientList';
-import UserList from './UserList';
-import UserProfileCard from './UserProfileCard';
-import LogoutButton from './LogoutButton';
-import DashboardHome from './DashboardHome';
-import '../styles/DashboardLayout.css';
+import React from 'react';
+import background from '../assets/background.jpg'; // ✅ Ton image
 
-const DashboardLayout = () => {
-  const [activeView, setActiveView] = useState('home');
-
-  const renderContent = () => {
-    switch (activeView) {
-      case 'reservations':
-        return <HotelList />;
-      case 'clients':
-        return <ClientList />;
-      case 'users':
-        return <UserList />;
-      default:
-        return <DashboardHome />; // 👈 Page d’accueil personnalisée
-    }
-  };
-
+const DashboardLayout = ({ children }) => {
   return (
-    <div className="dashboard-layout">
-      <Sidebar onSelect={setActiveView} />
-      <div className="dashboard-main">
-        <Topbar />
-        {renderContent()}
-        <UserProfileCard />
-        <LogoutButton />
+    <div
+      className="dashboard-layout"
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        minHeight: '100vh',
+      }}
+    >
+      <nav className="navbar">
+        <ul className="navbar-list">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/hotels">Hôtels</a></li>
+          <li><a href="/reservations">Réservations</a></li>
+          <li><a href="/clients">Clients</a></li>
+          <li><a href="/utilisateurs">Utilisateurs</a></li>
+        </ul>
+      </nav>
+
+      <div className="content">
+        {children}
       </div>
     </div>
   );

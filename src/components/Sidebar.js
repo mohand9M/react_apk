@@ -1,16 +1,17 @@
-// Sidebar.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Sidebar.css';
 
-const Sidebar = ({ onSelect }) => {
+const Sidebar = () => {
   return (
     <div className="sidebar">
       <h2>Menu</h2>
       <ul>
-        <li onClick={() => onSelect('home')}>Accueil</li>
-        <li onClick={() => onSelect('reservations')}>Réservations</li>
-        <li onClick={() => onSelect('clients')}>Clients</li>
-        <li onClick={() => onSelect('users')}>Utilisateurs</li>
+        <li><Link to="/">Accueil</Link></li>
+        <li><Link to="/hotels">Hôtels</Link></li>
+        <li><Link to="/reservations">Réservations</Link></li>
+        <li><Link to="/clients">Clients</Link></li>
+        <li><Link to="/utilisateurs">Utilisateurs</Link></li>
       </ul>
     </div>
   );

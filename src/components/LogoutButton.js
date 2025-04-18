@@ -3,12 +3,12 @@ import '../styles/LogoutButton.css';
 
 const LogoutButton = () => {
   const handleLogout = () => {
-    alert("Déconnexion...");
-    // Ici, tu peux ajouter la logique pour déconnexion
+    alert("Déconnexion réussie !");
+    window.location.href = "/";
   };
 
   return (
-    <button className="logout-button" onClick={handleLogout}>
+    <button className="logout-btn" onClick={handleLogout}>
       Se déconnecter
     </button>
   );
